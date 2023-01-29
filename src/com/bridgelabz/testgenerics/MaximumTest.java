@@ -5,21 +5,22 @@ import org.junit.Test;
 
 public class MaximumTest {
     @Test
-    public void Test_Generics_OF_Integer() {
-        Integer maxValue = new FindMaximum<Integer>(999, 88, 7).findMaximumValue();
-        Assert.assertEquals((Integer) 999, maxValue);
+    public void maximumIntegerAtPosition1() {
+        Integer maximumInteger = FindMaximum.maximumInteger(12, 4, 11);
+        Assert.assertSame(12, maximumInteger);
     }
 
 
     @Test
-    public void Test_Generics_OF_Float() {
-        Float maxValue = new FindMaximum<Float>(88.3f, 56.2f, 7.2f).findMaximumValue();
-        Assert.assertEquals((Float) 88.3f, maxValue);
+    public void maximumIntegerAtPosition2() {
+        Integer maximumInteger = FindMaximum.maximumInteger(4, 12, 11);
+        Assert.assertSame(12, maximumInteger);
     }
 
+
     @Test
-    public void Test_Generics_OF_String() {
-        String maxValue = new FindMaximum<String>("peach", "apple", "banana").findMaximumValue();
-        Assert.assertEquals((String) "peach", maxValue);
+    public void maximumIntegerAtPosition3() {
+        Integer maximumInteger = FindMaximum.maximumInteger(4, 11, 12);
+        Assert.assertSame(12, maximumInteger);
     }
 }
