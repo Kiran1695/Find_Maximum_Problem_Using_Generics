@@ -1,6 +1,20 @@
 package com.bridgelabz.maingenerics;
 
-public class FindMaximum {
+public class FindMaximum<T extends Comparable<T>> {
+    T firstValue;
+    T secondValue;
+    T thirdValue;
+
+    public FindMaximum(T firstValue, T secondValue, T thirdValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
+
+    public T findMaximumValue() {
+        return FindMaximum.maximumOfObject(firstValue, secondValue, thirdValue);
+    }
+
     // Generic Method
     public static <T extends Comparable<T>> T maximumOfObject(T first, T second, T third) {
         T maximumValue = first;
