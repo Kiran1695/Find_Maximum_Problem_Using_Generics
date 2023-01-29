@@ -16,6 +16,7 @@ public class FindMaximum<T extends Comparable<T>> {
     }
 
     public T findMaximumValue() {
+        printMaximumValue(firstValue, secondValue, thirdValue, maximumOfObject(firstValue, secondValue, thirdValue));
         return FindMaximum.maximumOfObject(firstValue, secondValue, thirdValue);
     }
 
@@ -38,6 +39,11 @@ public class FindMaximum<T extends Comparable<T>> {
         Collections.sort(list);
         System.out.println("Maximum Value is " + list.get(list.size() - 1));
         return list.get(list.size() - 1);
+    }
+
+    // printing maximum values
+    public static <T> void printMaximumValue(T firstValue, T secondValue, T thirdValue, T maximumValue) {
+        System.out.println("The maximum of " + firstValue + "," + secondValue + "," + thirdValue + " is " + maximumValue);
     }
 }
 

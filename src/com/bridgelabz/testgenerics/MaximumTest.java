@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumTest {
+
     @Test
     public void Test_Generics_OF_Integer() {
         Integer maxValue = new FindMaximum<Integer>(999, 88, 7).findMaximumValue();
@@ -20,9 +21,8 @@ public class MaximumTest {
     @Test
     public void Test_Generics_OF_String() {
         String maxValue = new FindMaximum<String>("peach", "apple", "banana").findMaximumValue();
-        Assert.assertEquals((String) "peach", maxValue);
+        Assert.assertEquals((String)"peach", maxValue);
     }
-
     @Test
     public void Test_Generics_OF_Integer_for_more_parameters() {
         Integer maxValueInteger = FindMaximum.maximumOfObject(98, 57, 48, 754, 63, 34, 25, 95, 43, 22, 514);
